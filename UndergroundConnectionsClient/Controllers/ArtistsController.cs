@@ -8,7 +8,9 @@ using Microsoft.AspNetCore.Http;
 using UndergroundConnectionsClient.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+
 using System.Dynamic;
+
 
 namespace UndergroundConnectionsClient.Controllers
 {
@@ -19,6 +21,7 @@ namespace UndergroundConnectionsClient.Controllers
       var allArtists = Artist.GetArtists();
       return View(allArtists);
     }
+
     public IActionResult Create()
     {
       var allClassifications = Classification.GetClassifications();
@@ -32,6 +35,7 @@ namespace UndergroundConnectionsClient.Controllers
       Artist.Post(artist);
       Classification.Post(classification);
       return RedirectToAction("Index","Classifications");
+
     }
 
     public IActionResult Details(int id)
