@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using UndergroundConnectionsClient.Models;
-<<<<<<< HEAD
-=======
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
->>>>>>> eb367d86c5412eca5518f2cba807d8b5a330567f
+
+using System.Dynamic;
+
 
 namespace UndergroundConnectionsClient.Controllers
 {
@@ -21,14 +21,7 @@ namespace UndergroundConnectionsClient.Controllers
       var allArtists = Artist.GetArtists();
       return View(allArtists);
     }
-<<<<<<< HEAD
 
-    [HttpPost]
-    public IActionResult Index(Artist artist)
-    {
-      Artist.Post(artist);
-      return RedirectToAction("Index");
-=======
     public IActionResult Create()
     {
       var allClassifications = Classification.GetClassifications();
@@ -37,17 +30,22 @@ namespace UndergroundConnectionsClient.Controllers
     }
 
     [HttpPost]
-    public IActionResult Create( Artist artist, int ClassificationId)
+    public IActionResult Create( Artist artist, Classification classification)
     {
       Artist.Post(artist);
+      Classification.Post(classification);
       return RedirectToAction("Index","Classifications");
->>>>>>> eb367d86c5412eca5518f2cba807d8b5a330567f
+
     }
 
     public IActionResult Details(int id)
     {
+      dynamic mymodel = new ExpandoObject();
       var artist = Artist.GetDetails(id);
-      return View(artist);
+      var classification = Classification.GetDetails(id);
+      mymodel.Artists = artist;
+      mymodel.Classifications = classification;
+      return View(mymodel);
     }
 
     public IActionResult Edit(int id)
@@ -61,6 +59,7 @@ namespace UndergroundConnectionsClient.Controllers
     {
       artist.ArtistId = id;
       Artist.Put(artist);
+      // Classification.Put(classification);
       return RedirectToAction("Details", id);
     }
 
