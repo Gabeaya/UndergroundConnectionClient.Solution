@@ -3,12 +3,26 @@
 <ol>
 @foreach (Classification classification in Model)
 {
-    <ul>
-        <li>ID: @classification.ClassificationId</li>
+    @* <ul>
+
         <li>Name: @classification.ClassificationName</li>
         <li>Specification: @classification.ClassificationSpecification</li>
-    </ul>
-    <a href="/Classifications/Details/@(classification.ClassificationId)"><p>View Details</p></a>
+    </ul> *@
+    <p>@Html.ActionLink("Find Singers", "Index", "Artists")</p>
+    <p>@Html.ActionLink("Find Photographers", "Index", "Artists")</p>
+    <p>@Html.ActionLink("Find Fashion Designers", "Index", "Artists")</p>
+    <p>@Html.ActionLink("Find Producers", "Index", "Artists")</p>
+    <p>@Html.ActionLink("Find Videographers", "Index", "Artists")</p>
+    <p>@Html.ActionLink("Find Painters", "Index", "Artists")</p>
+    <p>@Html.ActionLink("Find Graphic Designers", "Index", "Artists")</p>
+    <p>@Html.ActionLink("Find Dancers", "Index", "Artists")</p>
+    <p>@Html.ActionLink("Browse all artists", "Index", "Artists")</p>
+
+
+
+
+
+
     <br>
 }
 </ol>
