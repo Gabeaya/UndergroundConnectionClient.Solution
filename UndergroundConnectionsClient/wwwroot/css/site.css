@@ -10,16 +10,17 @@ a.navbar-brand {
 /* Provide sufficient contrast against white background */
 a {
   color: #0366d6;
+  font-size: medium;
 }
 
 .btn-primary {
-  color: #fff;
+
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
+  color: rgb(255, 255, 255);
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
@@ -59,9 +60,15 @@ html {
 }
 
 body {
-  background-color: lightcoral;
-  margin-bottom: 60px;
+  background-color: rgb(14, 13, 13);
+  background-image:url(../images/secondaryback.gif) ;
+  background-size: cover;
+  margin-bottom: 200px;
+  font-size: 40px;
+  color: white;
+  text-align: center;
 }
+
 .footer {
   position: absolute;
   bottom: 0;
@@ -69,3 +76,33 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+.jumbotron {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background:rgba(48, 38, 88, 0.5);
+  color: rgb(77, 74, 74);
+}
+.buttonstyle {
+  display: inline-block;
+  padding: 8px;
+  border: 3px solid #0e0481;
+  border-radius: 6px;
+  box-shadow: 
+      0 2px 1px rgba(0, 0, 0, 0.2), 
+      inset 0 2px 1px rgba(0, 0, 0, 0.2);
+  /* Font styles */
+  text-decoration: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #222;
+}
+
+.buttonstyle:hover {
+  border-color: #FDD68B
+}
+
+.buttonstyle:active {
+  border-color: #FEE8BD
+}
+
+
+
