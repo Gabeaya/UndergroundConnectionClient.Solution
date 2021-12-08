@@ -1,4 +1,4 @@
-@{
+@* @{
     ViewData["Title"] = "Details";
 }
 @using UndergroundConnectionsClient.Models;
@@ -18,7 +18,7 @@
 else
 {
     <h4>classification for the artist:</h4>
-    <ul>
+    <ul class="no-bull">
         @foreach(var join in Model.JoinEntities)
         {
             <li>@join.Classification.ClassificationName</li>
@@ -47,4 +47,33 @@ else
 
 <a href="/Artists"><p>Return</p></a>
 
-<a href="/Artists/Delete/@(Model.Artists.ArtistId)"><p>DELETE ARTIST</p></a> *@
+<a href="/Artists/Delete/@(Model.Artists.ArtistId)"><p>DELETE ARTIST</p></a> *@ 
+
+@using System.Security.Claims
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Artist Info:</h1>
+<ul>
+    <li>ID: @Model.ArtistId</li>
+    <li>Name: @Model.Name</li>
+    <li>Age: @Model.Age</li>
+    <li>Email: @Model.Email</li>
+    <li>Bio: @Model.Bio</li>
+    <li>Seeking: @Model.Seeking</li>
+    <li>Past Work: @Model.PastWork</li>
+</ul>
+<br>
+
+@{
+    if (@Model.Email == @ViewBag.CurrentUser.UserName) {
+        <a href="/Artists/Edit/@(Model.ArtistId)"><p>Edit</p></a>
+        <a href="/Artists/Delete/@(Model.ArtistId)"><p>DELETE ARTIST</p></a>
+    } else {
+        
+    }
+}
+
+
+<a href="/Artists"><p>Return</p></a>
