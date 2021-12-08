@@ -1,6 +1,11 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
-
+@font-face {
+  src: url(../font/BlasterFont-Demo.otf);
+  font-family: blast;
+  src: url(../font/Aquatico-Regular.otf);
+  font-family:agua;
+}
 a.navbar-brand {
   white-space: normal;
   text-align: center;
@@ -9,7 +14,7 @@ a.navbar-brand {
 
 /* Provide sufficient contrast against white background */
 a {
-  color: #0366d6;
+  color: #fafbfc;
   font-size: medium;
 }
 
@@ -35,7 +40,9 @@ html {
     font-size: 16px;
   }
 }
-
+ul.no-bullets {
+  list-style-type: none;
+}
 .border-top {
   border-top: 1px solid #e5e5e5;
 }
@@ -62,9 +69,9 @@ html {
 body {
   background-color: rgb(14, 13, 13);
   background-image:url(../images/secondaryback.gif) ;
-  background-size: cover;
+  background-size: 100% 100%;
   margin-bottom: 200px;
-  font-size: 40px;
+  font-size:large;
   color: white;
   text-align: center;
 }
@@ -75,12 +82,20 @@ body {
   width: 100%;
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
+  font-size:x-small;
 }
 .jumbotron {
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  background:rgba(48, 38, 88, 0.5);
-  color: rgb(77, 74, 74);
+  background:rgba(40, 30, 82, 0.5);
+  color: rgb(194, 187, 187);
+  text-shadow: 0 0 20px #0055ff;
+  font-family: agua;
+  font-size: large;
 }
+
+
+
+
 .buttonstyle {
   display: inline-block;
   padding: 8px;
@@ -103,6 +118,3 @@ body {
 .buttonstyle:active {
   border-color: #FEE8BD
 }
-
-
-
