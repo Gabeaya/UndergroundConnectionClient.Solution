@@ -29,13 +29,13 @@ namespace UndergroundConnectionsClient
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
 
             
-      services.AddEntityFrameworkMySql()
-        .AddDbContext<UndergroundConnectionsClientContext>(options => options
-        .UseMySql(Configuration["ConnectionStrings:DefaultConnection"], ServerVersion.AutoDetect(Configuration["ConnectionStrings:DefaultConnection"])));
+            services.AddEntityFrameworkMySql()
+                .AddDbContext<UndergroundConnectionsClientContext>(options => options
+                .UseMySql(Configuration["ConnectionStrings:DefaultConnection"], ServerVersion.AutoDetect(Configuration["ConnectionStrings:DefaultConnection"])));
 
-      services.AddIdentity<ApplicationUser, IdentityRole>()
-        .AddEntityFrameworkStores<UndergroundConnectionsClientContext>()
-        .AddDefaultTokenProviders();
+            services.AddIdentity<ApplicationUser, IdentityRole>()
+                .AddEntityFrameworkStores<UndergroundConnectionsClientContext>()
+                .AddDefaultTokenProviders();
 
       services.Configure<IdentityOptions>(options =>
       {
@@ -61,6 +61,7 @@ namespace UndergroundConnectionsClient
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+            app.UseAuthentication();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
