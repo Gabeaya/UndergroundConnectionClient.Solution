@@ -93,9 +93,13 @@ body {
   font-size: large;
 }
 
+.navback {
+  background-color: rgb(0, 0, 0);
+}
 
-
-
+.navbar-toggler {
+  color: white;
+}
 .buttonstyle {
   display: inline-block;
   padding: 8px;

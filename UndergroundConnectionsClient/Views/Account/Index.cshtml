@@ -2,7 +2,7 @@
   Layout = "_Layout";
 }
 @using System.Security.Claims
-<h2>Undergrond Connections</h2>
+<h2>Underground Connections</h2>
 
 @if(User.Identity.IsAuthenticated)
 {
@@ -14,7 +14,5 @@
   }
 
 }
-
-<p>@Html.ActionLink("Home", "Index", "Home")</p>
 <p>@Html.ActionLink("Login", "Login")</p>
 <p>@Html.ActionLink("Register", "Register")</p>
