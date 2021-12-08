@@ -7,11 +7,6 @@
 @if(User.Identity.IsAuthenticated)
 {
   <p>You are logged in as @User.Identity.Name.</p>
-
-  <ul>
-  <li>@Html.ActionLink("Manage artists","Index","Artists")</li>
-  <li>@Html.ActionLink("Manage classifications","Index","Classifications")</li>
-  </ul>
   
   @using (Html.BeginForm("LogOff", "Account"))
   {
