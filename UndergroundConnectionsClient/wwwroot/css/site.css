@@ -122,3 +122,6 @@ body {
 .buttonstyle:active {
   border-color: #FEE8BD
 }
+.primary {
+  color: white;
+}
