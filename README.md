@@ -47,21 +47,6 @@ In order to run the application, please install .NET for your computer to recogn
 2. Open the file. Follow the installation steps.
 3. Confirm the installation is successful by opening your terminal and running the command `dotnet --version`. The response should be something similar to this:`5.0.100`. This means it was successfully installed.
 
-##### Installing MySQL
-
-MySQL is a type of database software used to create, edit, query, and manage SQL data.
-
-- For Mac Users please [Click Here](https://dev.mysql.com/downloads/file/?id=484914) to download MySQL Installer
-- For Windows Users please [Click Here](https://dev.mysql.com/downloads/file/?id=484919)
-
-- Verify MySQL installation by opening the terminal and entering the command `mysql -uroot -p[THEPASSWORDYOUSELECTED]`
-- If you gain access you will see see the MYSQL command line!
-
-##### Installing MySQL Workbench
-
-- Please [Click Here](https://dev.mysql.com/downloads/workbench/) to install the correct version for your machine
-- Open MySQL Workbench and select `Local instance 3306 server`. You will need to enter the password you selected
-
 ##### Compiling
 
 - Navigate to the UnderGroundConnectionsClient folder in the command line
