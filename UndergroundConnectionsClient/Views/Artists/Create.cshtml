@@ -2,18 +2,37 @@
 
 @using (Html.BeginForm("Create", "Artists", new { classificationId = ViewBag.ClassificationId}))
 {
-  @Html.LabelFor(a => a.Name)
-  @Html.TextBoxFor(a => a.Name)
-  @Html.LabelFor(a => a.Age)
-  @Html.TextBoxFor(a => a.Age)
-  @Html.LabelFor(a => a.Email)
-  @Html.TextBoxFor(a => a.Email)
-  @Html.LabelFor(a => a.Bio)
-  @Html.TextBoxFor(a => a.Bio)
-  @Html.LabelFor(a => a.Seeking)
-  @Html.TextBoxFor(a => a.Seeking)
-  @Html.LabelFor(a => a.PastWork)
-  @Html.TextBoxFor(a => a.PastWork)
+  <div class="row">
+    <div class="col-4">
+      @Html.LabelFor(a => a.Name)
+      @Html.TextBoxFor(a => a.Name)
+    </div>
+    <div class="col-4">
+      @Html.LabelFor(a => a.Age)
+      @Html.TextBoxFor(a => a.Age)
+    </div>
+    <div class="col-4">
+      @Html.LabelFor(a => a.Email)
+      @Html.TextBoxFor(a => a.Email)
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-4">
+      @Html.LabelFor(a => a.Bio)
+      @Html.TextBoxFor(a => a.Bio)
+    </div>
+    <div class="col-4">
+      @Html.LabelFor(a => a.Seeking)
+      @Html.TextBoxFor(a => a.Seeking)
+    </div>
+    <div class="col-4">
+      @Html.LabelFor(a => a.PastWork)
+      @Html.TextBoxFor(a => a.PastWork)
+    </div>
+  </div>
+  <br>
+  
   @Html.Label("Select Classification")
   @Html.DropDownList("ClassificationId")
   <input type="submit" value="Add Artist" class="btn btn-primary" />
