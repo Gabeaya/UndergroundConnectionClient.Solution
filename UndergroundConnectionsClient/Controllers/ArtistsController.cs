@@ -143,7 +143,7 @@ namespace UndergroundConnectionsClient.Controllers
       //   { ClassificationId = ClassificationId, ArtistId = artist.ArtistId });
       //   // Classification.Post(new Classification(){ ClassificationId = ClassificationId});
       // }
-      return RedirectToAction("Index", "Classifications");
+      return RedirectToAction("Login", "Account");
     }
     public async Task<IActionResult> Edit(int id)
     {
