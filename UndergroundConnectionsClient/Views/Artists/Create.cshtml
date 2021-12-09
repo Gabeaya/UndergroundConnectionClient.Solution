@@ -2,6 +2,7 @@
 
 @using (Html.BeginForm("Create", "Artists", new { classificationId = ViewBag.ClassificationId}))
 {
+  
   <div class="row">
     <div class="col-4">
       @Html.LabelFor(a => a.Name)
@@ -32,7 +33,7 @@
     </div>
   </div>
   <br>
-  
+
   @Html.Label("Select Classification")
   @Html.DropDownList("ClassificationId")
   <input type="submit" value="Add Artist" class="btn btn-primary" />
